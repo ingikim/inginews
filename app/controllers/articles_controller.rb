@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
+
   def show
   end
 
@@ -45,6 +46,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title)
+      params.require(:article).permit(:title, :link)
     end
 end
